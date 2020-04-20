@@ -19,11 +19,16 @@ const App = () => {
       <SavedList list={savedList} />
 
       <Switch>
+        
         <Route path='/'>
           <MovieList />
-          
+        </Route>
+
+        
+        <Route>
           <Movie path='/movie/:id' />
         </Route>
+        
       </Switch>
     </div>
   );
