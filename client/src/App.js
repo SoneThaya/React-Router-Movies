@@ -12,6 +12,7 @@ const App = () => {
 
   const addToSavedList = movie => {
     setSavedList([...savedList, movie]);
+    console.log(savedList)
   };
 
   return (
@@ -22,7 +23,7 @@ const App = () => {
       <Switch>
         
         <Route path='/movies/:id'>
-          <Movie />
+          <Movie addToSavedList={addToSavedList} />
         </Route>
         
         <Route path='/'>
